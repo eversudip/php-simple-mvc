@@ -5,10 +5,15 @@ class Connector
 	/**
 	 * Make and return the database connection
 	 */
-	public static function make()
+	public static function make($config)
 	{
 		try {
-		    return  new PDO('mysql:host=127.0.0.1; dbname=users' , 'root', '');
+		    return new PDO(
+			    	$config['connection']. ';dbname='. $config['dbname'],
+			    	$config['user'],
+			    	$config['password'],
+			    	$config['options']
+		    	);
 		} catch(PDOException $e) {
 		    die($e->getMessage());
 		}
