@@ -1,7 +1,7 @@
 <?php
 
-$builder = require('appbootstrap.php');
+$builder = require('core/appbootstrap.php');
 $users = $builder->selectAllRecords('userlists');
 
 
-require ('index.tpl.php');
+require ('views/index.tpl.php');
