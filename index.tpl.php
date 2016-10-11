@@ -17,7 +17,11 @@
 <body>
 
 
-    <p>Hello world! <?= $greetings; ?></p>
+    <ul>
+        <?php foreach($arrayLists as $list) :?>
+            <li><?= $list; ?></li>
+        <?php endforeach; ?>
+    </ul>
 
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
