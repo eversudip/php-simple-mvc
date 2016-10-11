@@ -1,4 +1,9 @@
 <?php
-$greetings = 'Namaste';
+$arrayLists = [
+    'ram',
+    'shyam',
+    'rita',
+    'gita'
+];
 
 require ('index.tpl.php');
