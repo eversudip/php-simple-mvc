@@ -18,8 +18,9 @@
 
 
     <ul>
-        <?php foreach($persons as $attr => $value) :?>
-            <li><?= $attr.' :'. $value; ?></li>
+        <?php foreach($users as $user) :?>
+            <li><?= $user->name; ?></li>
+            <li><?= $user->address; ?></li>
         <?php endforeach; ?>
     </ul>
 

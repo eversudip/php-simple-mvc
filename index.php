@@ -1,11 +1,11 @@
 <?php
 
+require('database/Connector.php');
+require('database/QueryBuilder.php');
+$pdo = Connector::make();
 
-$persons = [
-    'name' => 'Ram',
-    'age' => 30,
-    'address' => 'Kathmandu',
-    'country' => 'Nepal'
-];
+$builder = new QueryBuilder($pdo);
+$users = $builder->selectAllRecords('userlists');
+
 
 require ('index.tpl.php');
