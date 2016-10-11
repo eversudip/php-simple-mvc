@@ -1,10 +1,6 @@
 <?php
 
-require('database/Connector.php');
-require('database/QueryBuilder.php');
-$pdo = Connector::make();
-
-$builder = new QueryBuilder($pdo);
+$builder = require('appbootstrap.php');
 $users = $builder->selectAllRecords('userlists');
 
 
