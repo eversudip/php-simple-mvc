@@ -18,8 +18,8 @@
 
 
     <ul>
-        <?php foreach($arrayLists as $list) :?>
-            <li><?= $list; ?></li>
+        <?php foreach($persons as $attr => $value) :?>
+            <li><?= $attr.' :'. $value; ?></li>
         <?php endforeach; ?>
     </ul>
 
