@@ -1,7 +1,7 @@
 <?php
 
 
-$users = $app['database']->selectAllRecords('userlists');
+$users = App::get('database')->selectAllRecords('userlists');
 
 
 require ('views/index.tpl.php');

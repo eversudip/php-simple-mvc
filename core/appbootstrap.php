@@ -1,6 +1,11 @@
 <?php
 
-$app=[];
+//Bind config key
+App::bind('config', require 'database.php');
 
-$app['config'] = require('database.php');
-$app['database'] = new QueryBuilder(Connector::make($app['config']['database']));
+//Bind database key
+App::bind('database', new QueryBuilder(
+	Connector::make(
+		App::get('config')['database'])
+	)
+);
