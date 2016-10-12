@@ -5,17 +5,17 @@ class PagesController
 	public function showHomePage()
 	{
 		$users = App::get('database')->selectAllRecords('userlists');
-		require ('views/index.tpl.php');
+		return view('index', compact('users'));
 	}
 
 	public function showAboutPage()
 	{
-		require('views/about.tpl.php');
+		return view('about');
 	}
 
 	public function showContactPage()
 	{
-		require('views/contact.tpl.php');
+		return view('about');
 	}
 
 	public function addUsers()
@@ -25,6 +25,6 @@ class PagesController
 		'address' => $_POST['address']
 		]);
 
-		header('Location: /');
+		return redirect('');
 	}
 }

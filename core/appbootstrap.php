@@ -9,3 +9,14 @@ App::bind('database', new QueryBuilder(
 		App::get('config')['database'])
 	)
 );
+
+function view($file, $data=[])
+{
+	extract($data);
+	return require("views/{$file}.tpl.php");
+}
+
+function redirect($path)
+{
+	return header("Location: /{$path}");
+}
