@@ -8,4 +8,12 @@
         <?php endforeach; ?>
     </ul>
 
+    <h1>submit form</h1>
+
+    <form method="post" action="addname">
+    	<input type="text" name="name">
+    	<button type="submit">Submit</button>
+    	
+    </form>
+
 <?php require('views/partials/foot.php')?>
