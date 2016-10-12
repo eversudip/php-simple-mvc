@@ -3,4 +3,4 @@
 require('vendor/autoload.php');
 require('core/appbootstrap.php');
 
-require Router::load('routes.php')->direct(Request::getUri(), Request::method());
+Router::load('routes.php')->direct(Request::getUri(), Request::method());
