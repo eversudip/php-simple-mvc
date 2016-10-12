@@ -1,5 +1,12 @@
 <?php
 
+use App\Core\App;
+use App\Core\Database\Connector;
+use App\Core\Database\QueryBuilder;
+
+
+
+
 //Bind config key
 App::bind('config', require 'database.php');
 

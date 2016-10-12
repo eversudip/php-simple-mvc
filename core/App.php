@@ -1,4 +1,8 @@
 <?php
+
+namespace App\Core;
+
+
 /**
  * Simple container class
  */
