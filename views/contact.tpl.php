@@ -15,18 +15,11 @@
 
 </head>
 <body>
-
 <li><a href="/">home</a></li>
 <li><a href="about">About</a></li>
 <li><a href="contact">Contact</a></li>
 
-
-    <ul>
-        <?php foreach($users as $user) :?>
-            <li><?= $user->name; ?></li>
-            <li><?= $user->address; ?></li>
-        <?php endforeach; ?>
-    </ul>
+    <h1>welcome to the contact page</h1>
 
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>

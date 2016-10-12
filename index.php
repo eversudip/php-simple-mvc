@@ -1,7 +1,7 @@
 <?php
 
 $builder = require('core/appbootstrap.php');
-$users = $builder->selectAllRecords('userlists');
 
+$router =  new Router;
 
-require ('views/index.tpl.php');
+require('routes.php');
