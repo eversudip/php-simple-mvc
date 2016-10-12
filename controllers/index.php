@@ -1,6 +1,6 @@
 <?php
 
-$users = $builder->selectAllRecords('userlists');
+$users = $app['database']->selectAllRecords('userlists');
 
 
 require ('views/index.tpl.php');
