@@ -12,6 +12,7 @@
 
     <form method="post" action="addname">
     	<input type="text" name="name">
+    	<input type="text" name="address">
     	<button type="submit">Submit</button>
     	
     </form>

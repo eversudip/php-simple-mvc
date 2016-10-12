@@ -21,5 +21,25 @@ class QueryBuilder
 		//var_dump($statement->fetchAll(PDO::FETCH_CLASS, 'className'));
 	}
 
+	/**
+	 * dynamic inserts into the tables
+	 */
+	public function insert($table, array $data)
+	{
+		$sql = sprintf('insert into %s (%s) values (%s)',
+				$table,
+				implode(', ', array_keys($data)),
+				':'.implode(', :', array_keys($data))
+			);
+		try {
+
+			$statement = $this->pdo->prepare($sql);
+			$statement->execute($data);
+
+		} catch(Exception $e) {
+			die('Something went wrong!');
+		}
+	}
+
 	
 }

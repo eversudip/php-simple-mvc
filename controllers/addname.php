@@ -1,3 +1,9 @@
 <?php
 
-var_dump($_POST);
+
+$app['database']->insert('userlists',[
+	'name' => $_POST['name'],
+	'address' => $_POST['address']
+	]);
+
+header('Location: /');
