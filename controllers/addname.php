@@ -1,7 +1,7 @@
 <?php
 
 
-$app['database']->insert('userlists',[
+App::get('database')->insert('userlists',[
 	'name' => $_POST['name'],
 	'address' => $_POST['address']
 	]);
